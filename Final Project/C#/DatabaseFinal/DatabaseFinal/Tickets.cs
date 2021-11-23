@@ -12,5 +12,13 @@ namespace DatabaseFinal
         public int TicketPrice { get; set; }
         public int GlobalTicketSales { get; set; }
 
+        public string FullInfo
+        {
+            get
+            {
+                return $"Movie Id: {MovieId} | Ticket Price: {TicketPrice} | GlobalTicketSales: {GlobalTicketSales} | Box Office: ${(TicketPrice*GlobalTicketSales)}";
+            }
+        }
+
     }
 }

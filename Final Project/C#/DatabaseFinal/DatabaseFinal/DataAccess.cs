@@ -10,11 +10,11 @@ namespace DatabaseFinal
 {
     public class DataAccess
     {
-        public List<Theater> GetAllTheaters()
+        public List<T> GetTableContents<T>(string name)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
             {
-                return connection.Query<Theater>("select * from Theaters.Theater T order by T.TheaterId").ToList();
+                return (List<T>)Convert.ChangeType(connection.Query<T>($"select * from Theaters.{name}").ToList(), typeof(List<T>));
             }
         }
     }

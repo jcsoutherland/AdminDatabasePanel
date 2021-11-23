@@ -12,8 +12,17 @@ namespace DatabaseFinal
         public int TheaterId { get; set; }
         public int MovieId { get; set; }
         public int Attendance { get; set; }
-        public DateTime ShowTime { get; set; }
+        public TimeSpan ShowTime { get; set; }
         public DateTime ShowDate { get; set; }
+
+        public string FullInfo
+        {
+            get
+            {
+                return $"ID: {ShowingId} Attendance: {Attendance} Show Time: {ShowTime} Show Date " + ShowDate.ToShortDateString();
+                //return $"ShowDate.ToShortDateString()";
+            }
+        }
 
     }
 }

@@ -31,10 +31,10 @@ namespace DatabaseFinal
         {
             this.DisplayInfoBox = new System.Windows.Forms.ListBox();
             this.SearchBtn = new System.Windows.Forms.Button();
-            this.SearchTxtBox = new System.Windows.Forms.TextBox();
             this.ConnectBtn = new System.Windows.Forms.Button();
             this.EnterTableLabel = new System.Windows.Forms.Label();
             this.ConnectionLabel = new System.Windows.Forms.Label();
+            this.TableComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // DisplayInfoBox
@@ -42,25 +42,18 @@ namespace DatabaseFinal
             this.DisplayInfoBox.FormattingEnabled = true;
             this.DisplayInfoBox.Location = new System.Drawing.Point(12, 80);
             this.DisplayInfoBox.Name = "DisplayInfoBox";
-            this.DisplayInfoBox.Size = new System.Drawing.Size(359, 264);
+            this.DisplayInfoBox.Size = new System.Drawing.Size(447, 264);
             this.DisplayInfoBox.TabIndex = 0;
             // 
             // SearchBtn
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(243, 43);
+            this.SearchBtn.Location = new System.Drawing.Point(221, 43);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(75, 21);
             this.SearchBtn.TabIndex = 1;
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = true;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
-            // SearchTxtBox
-            // 
-            this.SearchTxtBox.Location = new System.Drawing.Point(99, 43);
-            this.SearchTxtBox.Name = "SearchTxtBox";
-            this.SearchTxtBox.Size = new System.Drawing.Size(138, 20);
-            this.SearchTxtBox.TabIndex = 2;
             // 
             // ConnectBtn
             // 
@@ -91,15 +84,29 @@ namespace DatabaseFinal
             this.ConnectionLabel.TabIndex = 5;
             this.ConnectionLabel.Text = "Not Connected";
             // 
+            // TableComboBox
+            // 
+            this.TableComboBox.FormattingEnabled = true;
+            this.TableComboBox.Items.AddRange(new object[] {
+            "Theater",
+            "Staff",
+            "Movies",
+            "Showing",
+            "Tickets"});
+            this.TableComboBox.Location = new System.Drawing.Point(94, 43);
+            this.TableComboBox.Name = "TableComboBox";
+            this.TableComboBox.Size = new System.Drawing.Size(121, 21);
+            this.TableComboBox.TabIndex = 6;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 360);
+            this.ClientSize = new System.Drawing.Size(471, 360);
+            this.Controls.Add(this.TableComboBox);
             this.Controls.Add(this.ConnectionLabel);
             this.Controls.Add(this.EnterTableLabel);
             this.Controls.Add(this.ConnectBtn);
-            this.Controls.Add(this.SearchTxtBox);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.DisplayInfoBox);
             this.Name = "Dashboard";
@@ -113,10 +120,10 @@ namespace DatabaseFinal
 
         private System.Windows.Forms.ListBox DisplayInfoBox;
         private System.Windows.Forms.Button SearchBtn;
-        private System.Windows.Forms.TextBox SearchTxtBox;
         private System.Windows.Forms.Button ConnectBtn;
         private System.Windows.Forms.Label EnterTableLabel;
         private System.Windows.Forms.Label ConnectionLabel;
+        private System.Windows.Forms.ComboBox TableComboBox;
     }
 }
 

@@ -13,24 +13,45 @@ namespace DatabaseFinal
 {
     public partial class Dashboard : Form
     {
-        List<Theater> _theaters = new List<Theater>();
+        DataAccess db = new DataAccess();
         public Dashboard()
         {
             InitializeComponent();
-            UpdateBinding();
-        }
-
-        private void UpdateBinding()
-        {
-            DisplayInfoBox.DataSource = _theaters;
-            DisplayInfoBox.DisplayMember = "FullInfo";
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-            _theaters = db.GetAllTheaters();
-            UpdateBinding();
+            string name = TableComboBox.Text;
+            //List<Theater> _table = db.GetTableContents<Theater>(name);
+            switch (name)
+            {
+                case "Theater":
+                    List<Theater> theater = db.GetTableContents<Theater>(name);
+                        DisplayInfoBox.DataSource = theater;
+                        DisplayInfoBox.DisplayMember = "FullInfo";
+                    break;
+                case "Movies":
+                    List<Movies> movies = db.GetTableContents<Movies>(name);
+                    DisplayInfoBox.DataSource = movies;
+                    DisplayInfoBox.DisplayMember = "FullInfo";
+                    break;
+                case "Tickets":
+                    List<Tickets> tickets = db.GetTableContents<Tickets>(name); ;
+                    DisplayInfoBox.DataSource = tickets;
+                    DisplayInfoBox.DisplayMember = "FullInfo";
+                    break;
+                case "Staff":
+                    List<Staff> staff = db.GetTableContents<Staff>(name);
+                    DisplayInfoBox.DataSource = staff;
+                    DisplayInfoBox.DisplayMember = "FullInfo";
+                    break;
+                case "Showing":
+                    List<Showing> showing = db.GetTableContents<Showing>(name);
+                    DisplayInfoBox.DataSource = showing;
+                    DisplayInfoBox.DisplayMember = "FullInfo";
+                    break;
+            }
+            //UpdateBinding();
         }
 
         private void ConnectBtn_Click(object sender, EventArgs e)

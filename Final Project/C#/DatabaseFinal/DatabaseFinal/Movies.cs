@@ -14,5 +14,13 @@ namespace DatabaseFinal
         public int ReviewRating { get; set; }
         public int ReleaseDate { get; set; }
 
+        public string FullInfo
+        {
+            get
+            {
+                return $"{MovieId}: {MovieName} ({Genre}) [{ReviewRating}] {ReleaseDate}";
+            }
+        }
+
     }
 }
