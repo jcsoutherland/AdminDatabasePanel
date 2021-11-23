@@ -1,0 +1,13 @@
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\bin\Debug\DatabaseFinal.exe.config
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\bin\Debug\DatabaseFinal.exe
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\bin\Debug\DatabaseFinal.pdb
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.csproj.AssemblyReference.cache
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.Dashboard.resources
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.Properties.Resources.resources
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.csproj.GenerateResource.cache
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.csproj.CoreCompileInputs.cache
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.exe
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.pdb
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\bin\Debug\Dapper.dll
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\bin\Debug\Dapper.xml
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.csproj.CopyComplete
