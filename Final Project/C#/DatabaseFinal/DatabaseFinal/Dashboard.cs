@@ -21,37 +21,17 @@ namespace DatabaseFinal
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            string name = TableComboBox.Text;
-            //List<Theater> _table = db.GetTableContents<Theater>(name);
-            switch (name)
+            if(TableComboBox.Text == "")
             {
-                case "Theater":
-                    List<Theater> theater = db.GetTableContents<Theater>(name);
-                        DisplayInfoBox.DataSource = theater;
-                        DisplayInfoBox.DisplayMember = "FullInfo";
-                    break;
-                case "Movies":
-                    List<Movies> movies = db.GetTableContents<Movies>(name);
-                    DisplayInfoBox.DataSource = movies;
-                    DisplayInfoBox.DisplayMember = "FullInfo";
-                    break;
-                case "Tickets":
-                    List<Tickets> tickets = db.GetTableContents<Tickets>(name); ;
-                    DisplayInfoBox.DataSource = tickets;
-                    DisplayInfoBox.DisplayMember = "FullInfo";
-                    break;
-                case "Staff":
-                    List<Staff> staff = db.GetTableContents<Staff>(name);
-                    DisplayInfoBox.DataSource = staff;
-                    DisplayInfoBox.DisplayMember = "FullInfo";
-                    break;
-                case "Showing":
-                    List<Showing> showing = db.GetTableContents<Showing>(name);
-                    DisplayInfoBox.DataSource = showing;
-                    DisplayInfoBox.DisplayMember = "FullInfo";
-                    break;
+                MessageBox.Show("Please select a table first!");
             }
-            //UpdateBinding();
+            else
+            {
+                string name = TableComboBox.Text;
+                TableComboBox.SelectedIndex = -1;
+                SearchForm sf = new SearchForm(name);
+                sf.Show();
+            }
         }
 
         private void ConnectBtn_Click(object sender, EventArgs e)
@@ -66,11 +46,23 @@ namespace DatabaseFinal
                 ConnectionLabel.ForeColor = Color.LightGreen;
                 ConnectionLabel.Text = "Connected";
                 ConnectBtn.Enabled = false;
+                TableComboBox.Enabled = true;
+                SearchBtn.Enabled = true;
+                InsertBtn.Enabled = true;
+                UpdateBtn.Enabled = true;
+                DeleteBtn.Enabled = true;
+                CustomBtn.Enabled = true;
             }
             else
             {
                 ConnectionLabel.Text = "Failed to connect";
             }
+        }
+
+        private void CustomBtn_Click(object sender, EventArgs e)
+        {
+            CustomQForm cq = new CustomQForm();
+            cq.Show();
         }
     }
 }

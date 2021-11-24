@@ -29,25 +29,21 @@ namespace DatabaseFinal
         /// </summary>
         private void InitializeComponent()
         {
-            this.DisplayInfoBox = new System.Windows.Forms.ListBox();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.ConnectBtn = new System.Windows.Forms.Button();
             this.EnterTableLabel = new System.Windows.Forms.Label();
             this.ConnectionLabel = new System.Windows.Forms.Label();
             this.TableComboBox = new System.Windows.Forms.ComboBox();
+            this.InsertBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.CustomBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // DisplayInfoBox
-            // 
-            this.DisplayInfoBox.FormattingEnabled = true;
-            this.DisplayInfoBox.Location = new System.Drawing.Point(12, 80);
-            this.DisplayInfoBox.Name = "DisplayInfoBox";
-            this.DisplayInfoBox.Size = new System.Drawing.Size(447, 264);
-            this.DisplayInfoBox.TabIndex = 0;
             // 
             // SearchBtn
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(221, 43);
+            this.SearchBtn.Enabled = false;
+            this.SearchBtn.Location = new System.Drawing.Point(25, 70);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(75, 21);
             this.SearchBtn.TabIndex = 1;
@@ -70,9 +66,9 @@ namespace DatabaseFinal
             this.EnterTableLabel.AutoSize = true;
             this.EnterTableLabel.Location = new System.Drawing.Point(22, 46);
             this.EnterTableLabel.Name = "EnterTableLabel";
-            this.EnterTableLabel.Size = new System.Drawing.Size(65, 13);
+            this.EnterTableLabel.Size = new System.Drawing.Size(70, 13);
             this.EnterTableLabel.TabIndex = 4;
-            this.EnterTableLabel.Text = "Enter Table:";
+            this.EnterTableLabel.Text = "Select Table:";
             // 
             // ConnectionLabel
             // 
@@ -86,6 +82,7 @@ namespace DatabaseFinal
             // 
             // TableComboBox
             // 
+            this.TableComboBox.Enabled = false;
             this.TableComboBox.FormattingEnabled = true;
             this.TableComboBox.Items.AddRange(new object[] {
             "Theater",
@@ -95,20 +92,64 @@ namespace DatabaseFinal
             "Tickets"});
             this.TableComboBox.Location = new System.Drawing.Point(94, 43);
             this.TableComboBox.Name = "TableComboBox";
-            this.TableComboBox.Size = new System.Drawing.Size(121, 21);
+            this.TableComboBox.Size = new System.Drawing.Size(138, 21);
             this.TableComboBox.TabIndex = 6;
+            // 
+            // InsertBtn
+            // 
+            this.InsertBtn.Enabled = false;
+            this.InsertBtn.Location = new System.Drawing.Point(106, 70);
+            this.InsertBtn.Name = "InsertBtn";
+            this.InsertBtn.Size = new System.Drawing.Size(75, 21);
+            this.InsertBtn.TabIndex = 7;
+            this.InsertBtn.Text = "Insert";
+            this.InsertBtn.UseVisualStyleBackColor = true;
+            // 
+            // UpdateBtn
+            // 
+            this.UpdateBtn.Enabled = false;
+            this.UpdateBtn.Location = new System.Drawing.Point(187, 70);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(75, 21);
+            this.UpdateBtn.TabIndex = 8;
+            this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.Enabled = false;
+            this.DeleteBtn.Location = new System.Drawing.Point(268, 70);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(75, 21);
+            this.DeleteBtn.TabIndex = 9;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = true;
+            // 
+            // CustomBtn
+            // 
+            this.CustomBtn.Enabled = false;
+            this.CustomBtn.Location = new System.Drawing.Point(24, 97);
+            this.CustomBtn.Name = "CustomBtn";
+            this.CustomBtn.Size = new System.Drawing.Size(318, 21);
+            this.CustomBtn.TabIndex = 10;
+            this.CustomBtn.Text = "Custom Query";
+            this.CustomBtn.UseVisualStyleBackColor = true;
+            this.CustomBtn.Click += new System.EventHandler(this.CustomBtn_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 360);
+            this.ClientSize = new System.Drawing.Size(354, 130);
+            this.Controls.Add(this.CustomBtn);
+            this.Controls.Add(this.DeleteBtn);
+            this.Controls.Add(this.UpdateBtn);
+            this.Controls.Add(this.InsertBtn);
             this.Controls.Add(this.TableComboBox);
             this.Controls.Add(this.ConnectionLabel);
             this.Controls.Add(this.EnterTableLabel);
             this.Controls.Add(this.ConnectBtn);
             this.Controls.Add(this.SearchBtn);
-            this.Controls.Add(this.DisplayInfoBox);
             this.Name = "Dashboard";
             this.Text = "Database Dashboard";
             this.ResumeLayout(false);
@@ -117,13 +158,15 @@ namespace DatabaseFinal
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox DisplayInfoBox;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.Button ConnectBtn;
         private System.Windows.Forms.Label EnterTableLabel;
         private System.Windows.Forms.Label ConnectionLabel;
         private System.Windows.Forms.ComboBox TableComboBox;
+        private System.Windows.Forms.Button InsertBtn;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button DeleteBtn;
+        private System.Windows.Forms.Button CustomBtn;
     }
 }
 

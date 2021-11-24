@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DatabaseFinal
 {
-    public class Staff
+    public class Staff : Table
     {
+        public string type = "Staff";
         public int StaffId { get; set; }
         public int TheaterId { get; set; }
         public int Hours { get; set; }
