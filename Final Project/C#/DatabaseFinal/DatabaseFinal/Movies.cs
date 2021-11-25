@@ -14,12 +14,13 @@ namespace DatabaseFinal
         public string Genre { get; set; }
         public int ReviewRating { get; set; }
         public int ReleaseDate { get; set; }
+        public bool IsRemoved { get; set; }
 
         public string FullInfo
         {
             get
             {
-                return $"{MovieId}: {MovieName} ({Genre}) [{ReviewRating}] {ReleaseDate}";
+                return $"{MovieId}: {MovieName} ({Genre}) [{ReviewRating}] {ReleaseDate} {IsRemoved}";
             }
         }
 

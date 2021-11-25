@@ -43,7 +43,7 @@ namespace DatabaseFinal
             // SearchBtn
             // 
             this.SearchBtn.Enabled = false;
-            this.SearchBtn.Location = new System.Drawing.Point(25, 70);
+            this.SearchBtn.Location = new System.Drawing.Point(25, 59);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(75, 21);
             this.SearchBtn.TabIndex = 1;
@@ -53,7 +53,7 @@ namespace DatabaseFinal
             // 
             // ConnectBtn
             // 
-            this.ConnectBtn.Location = new System.Drawing.Point(25, 12);
+            this.ConnectBtn.Location = new System.Drawing.Point(25, 5);
             this.ConnectBtn.Name = "ConnectBtn";
             this.ConnectBtn.Size = new System.Drawing.Size(75, 21);
             this.ConnectBtn.TabIndex = 3;
@@ -64,7 +64,7 @@ namespace DatabaseFinal
             // EnterTableLabel
             // 
             this.EnterTableLabel.AutoSize = true;
-            this.EnterTableLabel.Location = new System.Drawing.Point(22, 46);
+            this.EnterTableLabel.Location = new System.Drawing.Point(21, 35);
             this.EnterTableLabel.Name = "EnterTableLabel";
             this.EnterTableLabel.Size = new System.Drawing.Size(70, 13);
             this.EnterTableLabel.TabIndex = 4;
@@ -74,7 +74,7 @@ namespace DatabaseFinal
             // 
             this.ConnectionLabel.AutoSize = true;
             this.ConnectionLabel.ForeColor = System.Drawing.Color.Firebrick;
-            this.ConnectionLabel.Location = new System.Drawing.Point(106, 16);
+            this.ConnectionLabel.Location = new System.Drawing.Point(106, 9);
             this.ConnectionLabel.Name = "ConnectionLabel";
             this.ConnectionLabel.Size = new System.Drawing.Size(79, 13);
             this.ConnectionLabel.TabIndex = 5;
@@ -90,7 +90,7 @@ namespace DatabaseFinal
             "Movies",
             "Showing",
             "Tickets"});
-            this.TableComboBox.Location = new System.Drawing.Point(94, 43);
+            this.TableComboBox.Location = new System.Drawing.Point(97, 32);
             this.TableComboBox.Name = "TableComboBox";
             this.TableComboBox.Size = new System.Drawing.Size(138, 21);
             this.TableComboBox.TabIndex = 6;
@@ -98,39 +98,42 @@ namespace DatabaseFinal
             // InsertBtn
             // 
             this.InsertBtn.Enabled = false;
-            this.InsertBtn.Location = new System.Drawing.Point(106, 70);
+            this.InsertBtn.Location = new System.Drawing.Point(106, 59);
             this.InsertBtn.Name = "InsertBtn";
             this.InsertBtn.Size = new System.Drawing.Size(75, 21);
             this.InsertBtn.TabIndex = 7;
             this.InsertBtn.Text = "Insert";
             this.InsertBtn.UseVisualStyleBackColor = true;
+            this.InsertBtn.Click += new System.EventHandler(this.InsertBtn_Click);
             // 
             // UpdateBtn
             // 
             this.UpdateBtn.Enabled = false;
-            this.UpdateBtn.Location = new System.Drawing.Point(187, 70);
+            this.UpdateBtn.Location = new System.Drawing.Point(187, 59);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(75, 21);
             this.UpdateBtn.TabIndex = 8;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // DeleteBtn
             // 
             this.DeleteBtn.Enabled = false;
-            this.DeleteBtn.Location = new System.Drawing.Point(268, 70);
+            this.DeleteBtn.Location = new System.Drawing.Point(268, 59);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(75, 21);
+            this.DeleteBtn.Size = new System.Drawing.Size(94, 21);
             this.DeleteBtn.TabIndex = 9;
-            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.Text = "Delete/Recover";
             this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // CustomBtn
             // 
             this.CustomBtn.Enabled = false;
-            this.CustomBtn.Location = new System.Drawing.Point(24, 97);
+            this.CustomBtn.Location = new System.Drawing.Point(24, 86);
             this.CustomBtn.Name = "CustomBtn";
-            this.CustomBtn.Size = new System.Drawing.Size(318, 21);
+            this.CustomBtn.Size = new System.Drawing.Size(338, 21);
             this.CustomBtn.TabIndex = 10;
             this.CustomBtn.Text = "Custom Query";
             this.CustomBtn.UseVisualStyleBackColor = true;
@@ -140,7 +143,7 @@ namespace DatabaseFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 130);
+            this.ClientSize = new System.Drawing.Size(390, 117);
             this.Controls.Add(this.CustomBtn);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.UpdateBtn);

@@ -12,12 +12,13 @@ namespace DatabaseFinal
         public int MovieId { get; set; }
         public int TicketPrice { get; set; }
         public int GlobalTicketSales { get; set; }
+        public bool IsRemoved { get; set; }
 
         public string FullInfo
         {
             get
             {
-                return $"Movie Id: {MovieId} | Ticket Price: {TicketPrice} | GlobalTicketSales: {GlobalTicketSales} | Box Office: ${(TicketPrice*GlobalTicketSales)}";
+                return $"Movie Id: {MovieId} | Ticket Price: {TicketPrice} | GlobalTicketSales: {GlobalTicketSales} | Box Office: ${(TicketPrice*GlobalTicketSales)} {IsRemoved}";
             }
         }
 

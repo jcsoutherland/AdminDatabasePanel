@@ -16,11 +16,13 @@ namespace DatabaseFinal
         public TimeSpan ShowTime { get; set; }
         public DateTime ShowDate { get; set; }
 
+        public bool IsRemoved { get; set; }
+
         public string FullInfo
         {
             get
             {
-                return $"ID: {ShowingId} Attendance: {Attendance} Show Time: {ShowTime} Show Date " + ShowDate.ToShortDateString();
+                return $"ID: {ShowingId} Attendance: {Attendance} Show Time: {ShowTime} Show Date " + ShowDate.ToShortDateString() + $" {IsRemoved}";
                 //return $"ShowDate.ToShortDateString()";
             }
         }

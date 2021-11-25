@@ -28,7 +28,7 @@ namespace DatabaseFinal
             else
             {
                 string name = TableComboBox.Text;
-                TableComboBox.SelectedIndex = -1;
+                //TableComboBox.SelectedIndex = -1;
                 SearchForm sf = new SearchForm(name);
                 sf.Show();
             }
@@ -63,6 +63,48 @@ namespace DatabaseFinal
         {
             CustomQForm cq = new CustomQForm();
             cq.Show();
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (TableComboBox.Text == "")
+            {
+                MessageBox.Show("Please select a table first!");
+            }
+            else
+            {
+                string name = TableComboBox.Text;
+                DeleteForm df = new DeleteForm(name);
+                df.Show();
+            }
+        }
+
+        private void InsertBtn_Click(object sender, EventArgs e)
+        {
+            if (TableComboBox.Text == "")
+            {
+                MessageBox.Show("Please select a table first!");
+            }
+            else
+            {
+                string name = TableComboBox.Text;
+                InsertForm I = new InsertForm(name);
+                I.Show();
+            }
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            if (TableComboBox.Text == "")
+            {
+                MessageBox.Show("Please select a table first!");
+            }
+            else
+            {
+                string name = TableComboBox.Text;
+                UpdateForm U = new UpdateForm(name);
+                U.Show();
+            }
         }
     }
 }

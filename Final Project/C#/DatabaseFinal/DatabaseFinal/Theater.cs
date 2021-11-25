@@ -12,12 +12,13 @@ namespace DatabaseFinal
         public int TheaterId { get; set; }
         public string Location { get; set; }
         public string Name { get; set; }
+        public bool IsRemoved { get; set; }
 
         public string FullInfo
         {
             get 
             { 
-                return $"{TheaterId}: {Name} ({Location})"; 
+                return $"{TheaterId}: {Name} ({Location}) {IsRemoved}"; 
             }
         }
 

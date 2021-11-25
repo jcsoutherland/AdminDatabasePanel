@@ -19,5 +19,16 @@ namespace DatabaseFinal
             }
             return str;
         }
+        public List<string> GetPropTypes()
+        {
+            Type type = this.GetType();
+            System.Reflection.PropertyInfo[] props = type.GetProperties();
+            List<string> str = new List<string>();
+            foreach(var prop in props)
+            {
+                str.Add(prop.PropertyType.ToString());
+            }
+            return str;
+        }
     }
 }

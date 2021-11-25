@@ -13,3 +13,6 @@ C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\bin\Debug\Dapper.xml
 C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.csproj.CopyComplete
 C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.SearchForm.resources
 C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.CustomQForm.resources
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.DeleteForm.resources
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.InsertForm.resources
+C:\Users\nexbo\source\repos\DatabaseFinal\DatabaseFinal\obj\Debug\DatabaseFinal.UpdateForm.resources

@@ -13,12 +13,13 @@ namespace DatabaseFinal
         public int TheaterId { get; set; }
         public int Hours { get; set; }
         public int HourlyPay { get; set; }
+        public bool IsRemoved { get; set; }
 
         public string FullInfo
         {
             get
             {
-                return $"{StaffId}: Hours Worked: {Hours} Hourly Pay: ${HourlyPay} Paycheck: ${(Hours*HourlyPay)}";
+                return $"{StaffId}: Hours Worked: {Hours} Hourly Pay: ${HourlyPay} Paycheck: ${(Hours*HourlyPay)}  {IsRemoved}";
             }
         }
     }

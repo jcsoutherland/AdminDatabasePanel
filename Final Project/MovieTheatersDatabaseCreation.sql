@@ -7,6 +7,15 @@ DROP TABLE IF EXISTS Theaters.Showing
 DROP TABLE IF EXISTS Theaters.Movies
 DROP TABLE IF EXISTS Theaters.Tickets
 
+--ALTER TABLE Theaters.Tickets ALTER COLUMN MovieId INT NULL;
+ALTER TABLE Theaters.Tickets ALTER COLUMN TicketPrice INT NULL;
+ALTER TABLE Theaters.Tickets ALTER COLUMN GlobalTicketSales INT NULL;
+--ALTER TABLE Theaters.Showing ALTER COLUMN ShowTime TIME NULL;
+--ALTER TABLE Theaters.Showing ALTER COLUMN ShowDate DATE NULL
+
+
+--Select * From Theaters.Theater Where Theaters.Theater.Name Like '%Theater%' and Theaters.Theater.IsRemoved = 0
+
 CREATE TABLE Theaters.Theater
 (
 	TheaterId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
