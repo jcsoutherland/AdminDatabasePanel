@@ -12,7 +12,8 @@ namespace DatabaseFinal
         public static string CnnVal()
         {
             //not sure how to make a connection string for any local server yet
-            return @"Data Source=DESKTOP-PBCL2JN\MSSQLLOCALDB;Initial Catalog=MovieTheaters;Trusted_Connection=true;";
+            //return @"Data Source=DESKTOP-PBCL2JN\MSSQLLOCALDB;Initial Catalog=MovieTheaters;Trusted_Connection=true;";
+            return @"Data Source=.\MSSQLLocalDB;Initial Catalog=MovieTheaters;Trusted_Connection=true;";
         }
     }
 }
