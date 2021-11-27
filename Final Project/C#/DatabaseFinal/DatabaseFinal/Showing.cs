@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseFinal
 {
+    //Inherits Table and gets all column information from SQL server
     public class Showing : Table
     {
         public string type = "Showing";
@@ -18,12 +19,12 @@ namespace DatabaseFinal
 
         public bool IsRemoved { get; set; }
 
+        //Print string
         public string FullInfo
         {
             get
             {
                 return $"ID: {ShowingId} Attendance: {Attendance} Show Time: {ShowTime} Show Date " + ShowDate.ToShortDateString() + $" {IsRemoved}";
-                //return $"ShowDate.ToShortDateString()";
             }
         }
 

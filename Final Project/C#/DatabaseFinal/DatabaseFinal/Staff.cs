@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseFinal
 {
+    //Inherits Table and gets all column information from SQL server
     public class Staff : Table
     {
         public string type = "Staff";
@@ -15,6 +16,7 @@ namespace DatabaseFinal
         public int HourlyPay { get; set; }
         public bool IsRemoved { get; set; }
 
+        //Print string
         public string FullInfo
         {
             get

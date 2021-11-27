@@ -8,6 +8,7 @@ namespace DatabaseFinal
 {
     public class Table
     {
+        //Gets all property names from a table
         public List<string> GetPropertyNames()
         {
             Type type = this.GetType();
@@ -19,6 +20,7 @@ namespace DatabaseFinal
             }
             return str;
         }
+        //Gets all property types
         public List<string> GetPropTypes()
         {
             Type type = this.GetType();

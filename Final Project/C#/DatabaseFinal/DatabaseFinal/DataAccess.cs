@@ -8,8 +8,10 @@ using Dapper;
 
 namespace DatabaseFinal
 {
+    //All access methods for data in the SQL server using Dapper
     public class DataAccess
     {
+        //Asks the SQL database for the contents of the given table
         public List<T> GetTableContents<T>(string name)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
@@ -18,12 +20,15 @@ namespace DatabaseFinal
             }
         }
 
+        //Asks SQL database for results given the users "Where" statements.
         public List<T> GetWhere<T>(string name, string column, string w)
         {
+            //AllInfo column
             if(column == "*")
             {
                 return GetTableContents<T>(name);
             }
+            //Soft delete column
             if(column == "IsRemoved")
             {
                 using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
@@ -37,6 +42,7 @@ namespace DatabaseFinal
             }
         }
 
+        //Sends custom query to SQL database and returns the result
         public List<T> GetCustomQuery<T>(string query)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
@@ -44,7 +50,8 @@ namespace DatabaseFinal
                 return (List<T>)Convert.ChangeType(connection.Query<T>(query).ToList(), typeof(List<T>));
             }
         }
-
+        
+        //Requests to delete a row in a given table in the SQL database
         public void DeleteRow(string name, string cmd)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
@@ -52,6 +59,8 @@ namespace DatabaseFinal
                 connection.Query($"Update Theaters.{name} SET [IsRemoved]=1 {cmd}");
             }
         }
+
+        //Requests to recover a deleted row in a given table in the SQL database
         public void RecoverRow(string name, string cmd)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
@@ -59,9 +68,11 @@ namespace DatabaseFinal
                 connection.Query($"Update Theaters.{name} SET [IsRemoved]=0 {cmd}");
             }
         }
-
+        
+        //Sends insert statement given by user to SQL database
         public void InsertIntoTable(string name, string cmd, string columns)
         {
+            //All columns
             if(columns == "")
             {
                 using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
@@ -69,6 +80,7 @@ namespace DatabaseFinal
                     connection.Query($"Insert Into Theaters.{name} Values({cmd});");
                 }
             }
+            //Some columns
             else
             {
                 using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
@@ -78,8 +90,10 @@ namespace DatabaseFinal
             }
         }
 
+        //Sends update statement given by user to SQL database
         public void UpdateTable(string name, string cmd, string columns)
         {
+            //All columns
             if(cmd == "")
             {
                 using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
@@ -87,6 +101,7 @@ namespace DatabaseFinal
                     connection.Query($"Update Theaters.{name} Set {columns}");
                 }
             }
+            //Some columns
             else
             {
                 using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))

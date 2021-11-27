@@ -24,6 +24,7 @@ namespace DatabaseFinal
             SetTableInfo();
         }
         
+        //Set table info based on what type of table is being returned by SQL server
         public void SetTableInfo()
         {
             switch (_type)
@@ -52,6 +53,7 @@ namespace DatabaseFinal
             PropertyMenu.SelectedItem = "FullInfo";
         }
 
+        //Gets information from SQL server and populates infobox
         private void GoBtn_Click(object sender, EventArgs e)
         {
             string str = PropertyMenu.Text;

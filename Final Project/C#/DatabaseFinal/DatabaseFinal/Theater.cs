@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseFinal
 {
+    //Inherits Table and gets all column information from SQL server
     public class Theater : Table
     {
         public string type = "Theater";
@@ -14,6 +15,7 @@ namespace DatabaseFinal
         public string Name { get; set; }
         public bool IsRemoved { get; set; }
 
+        //Print string
         public string FullInfo
         {
             get 

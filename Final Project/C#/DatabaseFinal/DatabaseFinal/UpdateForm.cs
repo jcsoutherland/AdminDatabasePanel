@@ -23,7 +23,7 @@ namespace DatabaseFinal
             this.Text = $"Update for {type}";
             DisplayProps();
         }
-
+        //Get Properties of SQL Table to display on form
         public void DisplayProps()
         {
             switch (_type)
@@ -63,6 +63,7 @@ namespace DatabaseFinal
             ColumnDescriptorTxt.Text += $"[{str}]";
             TypeDescriptorTxt.Text += $"[{str2}]";
         }
+        //Send update query information to SQL database to be updated
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             db.UpdateTable(_type, WhereTxt.Text, UpdateTxt.Text);

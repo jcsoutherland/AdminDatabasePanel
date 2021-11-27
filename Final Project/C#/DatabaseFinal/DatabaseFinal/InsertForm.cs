@@ -24,12 +24,14 @@ namespace DatabaseFinal
             DisplayProps();
         }
 
+        //Send query information to SQL database to be inserted.
         private void InsrtButton_Click(object sender, EventArgs e)
         {
             db.InsertIntoTable(_type, ValuesText.Text, ColumnsText.Text);
             MessageBox.Show("Successfully Inserted!");
         }
 
+        //Get Properties of SQL Table to display on form
         public void DisplayProps()
         {
             switch (_type)

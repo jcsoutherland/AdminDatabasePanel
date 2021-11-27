@@ -18,7 +18,8 @@ namespace DatabaseFinal
         {
             InitializeComponent();
         }
-
+        
+        //Opens search form with selected table
         private void SearchBtn_Click(object sender, EventArgs e)
         {
             if(TableComboBox.Text == "")
@@ -34,6 +35,7 @@ namespace DatabaseFinal
             }
         }
 
+        //Connects to SQL server using helpers connection string
         private void ConnectBtn_Click(object sender, EventArgs e)
         {
             string connectionString;
@@ -59,12 +61,14 @@ namespace DatabaseFinal
             }
         }
 
+        //Opens custom query form
         private void CustomBtn_Click(object sender, EventArgs e)
         {
             CustomQForm cq = new CustomQForm();
             cq.Show();
         }
 
+        //Opens delete form
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             if (TableComboBox.Text == "")
@@ -79,6 +83,7 @@ namespace DatabaseFinal
             }
         }
 
+        //Opens insert form
         private void InsertBtn_Click(object sender, EventArgs e)
         {
             if (TableComboBox.Text == "")
@@ -93,6 +98,7 @@ namespace DatabaseFinal
             }
         }
 
+        //Opens update form
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             if (TableComboBox.Text == "")

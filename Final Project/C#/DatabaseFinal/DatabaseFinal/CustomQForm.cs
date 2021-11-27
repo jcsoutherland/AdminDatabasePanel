@@ -18,11 +18,13 @@ namespace DatabaseFinal
             InitializeComponent();
         }
 
-        /*ex:select *
-             from Theaters.Theater T
-             where T.TheaterId between 1 and 20
-             order by T.TheaterId desc
-        */
+    /*ex:select *
+     from Theaters.Theater T
+     where T.TheaterId between 1 and 20
+     order by T.TheaterId desc
+    */
+
+        //Sends custom query to SQL database and gets the results
         private void SendQueryBtn_Click(object sender, EventArgs e)
         {
             List<string> list = QueryText.Text.Split('\n').ToList();
@@ -37,6 +39,7 @@ namespace DatabaseFinal
             ResultListBox.Visible = true;
         }
 
+        //Clears the custom query text.
         private void NewQBtn_Click(object sender, EventArgs e)
         {
             ResultListBox.Visible = false;
