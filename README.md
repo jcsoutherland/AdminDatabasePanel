@@ -13,7 +13,7 @@ File Structure:
  >
  >FinalDatabaseDesign.pdf: Database design diagram
  >
- >MovieTheatersDatabaseCreation.sql: The SQL query which creates our database and populate it on our server
+ >Data.sql: The SQL query which creates our database and populate it on our server
  >
   >>Database Name: MovieTheaters, Consists of tables: Theater, Movies, Showing, Staff, Tickets
  >
