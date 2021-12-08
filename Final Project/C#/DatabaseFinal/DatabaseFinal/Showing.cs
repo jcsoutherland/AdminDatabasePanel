@@ -24,7 +24,7 @@ namespace DatabaseFinal
         {
             get
             {
-                return $"ID: {ShowingId} Attendance: {Attendance} Show Time: {ShowTime} Show Date " + ShowDate.ToShortDateString() + $" {IsRemoved}";
+                return $"ID: {ShowingId} Movie Theater: {TheaterId} Movie: {MovieId} Attendance: {Attendance} Show Time: {ShowTime} Show Date " + ShowDate.ToShortDateString();
             }
         }
 

@@ -56,7 +56,7 @@ namespace DatabaseFinal
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
             {
-                connection.Query($"Update Theaters.{name} SET [IsRemoved]=1 {cmd}");
+                connection.Query($"Update Theaters.{name} SET [IsRemoved]=1 Where {cmd}");
             }
         }
 
@@ -65,7 +65,7 @@ namespace DatabaseFinal
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal()))
             {
-                connection.Query($"Update Theaters.{name} SET [IsRemoved]=0 {cmd}");
+                connection.Query($"Update Theaters.{name} SET [IsRemoved]=0 Where {cmd}");
             }
         }
         

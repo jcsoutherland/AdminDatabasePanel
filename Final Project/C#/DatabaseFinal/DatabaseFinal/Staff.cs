@@ -21,7 +21,7 @@ namespace DatabaseFinal
         {
             get
             {
-                return $"{StaffId}: Hours Worked: {Hours} Hourly Pay: ${HourlyPay} Paycheck: ${(Hours*HourlyPay)}  {IsRemoved}";
+                return $"{StaffId}: Hours Worked: {Hours} Hourly Pay: ${HourlyPay} Paycheck: ${(Hours*HourlyPay)} Movie Theater: {TheaterId}";
             }
         }
     }
