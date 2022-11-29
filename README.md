@@ -1,9 +1,9 @@
-# CIS560FinalProject
+# AdminDatabasePanel
 
 Important Note: Must change sql server host string in Helper.cs to local sql server to work on any local pc sql server!
 
 File Structure:
- >Final Project -> C# -> DatabaseFinal -> DatabaseFinal.sln: Is our C# code submission which interacts with our SQL Server.
+ >C# -> DatabaseFinal -> DatabaseFinal.sln: Is our C# code submission which interacts with our SQL Server.
   >>
   >>Table, Theater, Movies, Showing, Staff, Tickets: Table objects used for storing results from server
   >>
